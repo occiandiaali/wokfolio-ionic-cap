@@ -1,0 +1,7 @@
+{
+  "name": "wok-folio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
