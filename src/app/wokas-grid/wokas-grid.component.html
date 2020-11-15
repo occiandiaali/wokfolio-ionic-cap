@@ -1,0 +1,117 @@
+<!-- <ion-searchbar
+  [(ngModel)]="searchTerm"
+  (ngModelChange)="setFilteredItems()"
+  placeholder="Looking for? Type here..."></ion-searchbar> -->
+
+  <ion-searchbar [formControl]="searchControl"
+  (ngModelChange)="onSearchInput()"></ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
+
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let item of items">
+      <div>
+        <ion-card>
+          <img src="{{ item.image }}" alt="{{ item.title }}"/>
+          <ion-card-header>
+            <ion-card-title>{{ item.title }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-row color="warning">
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2015/12/17/23/34/wire-1098059_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Mechanic</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2018/01/17/06/21/electrician-3087536_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Plumber</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota.
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row color="primary">
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2017/03/15/20/52/lines-2147450_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Generator technician</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2015/12/17/23/34/wire-1098059_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Electrician</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row color="secondary">
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2018/01/17/06/21/electrician-3087536_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Nanny</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-card>
+          <img src="https://cdn.pixabay.com/photo/2018/01/17/06/21/electrician-3087536_960_720.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>Carpenter</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row> -->
+</ion-grid>
+
